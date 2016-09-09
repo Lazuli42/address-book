@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Adress Book</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Address Book</h1>
+        <form action="/new_contact" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" placeholder="(555) 555-555" required>
+
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="Address" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        {% if contacts is not empty %}
+            <ul>
+            {% for contact in contacts %}
+                <li> {{contact.name}} </li>
+                <p> {{contact.phone}} </p>
+                <p> {{contact.address}} </p>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

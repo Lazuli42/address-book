@@ -1,0 +1,13 @@
+{
+  "require": {
+    "silex/silex": "2.0",
+    "twig/twig": "1.24.1"
+},
+
+"config": {
+    "disable-tls": true,
+    "preferred-install": "dist",
+    "bin-dir": "vendor/bin/",
+    "secure-http": false
+}
+}
