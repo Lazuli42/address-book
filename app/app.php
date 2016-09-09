@@ -22,5 +22,10 @@
         return $app['twig']->render( 'home.html.twig', array ("contacts" => Contact::getAll()) );
     });
 
+    $app->post("/clear_list", function() use ($app) {
+        Contact::clearList();
+        return $app['twig']->render( 'home.html.twig', array ("contacts" => Contact::getAll()) );
+    });
+
     return $app;
  ?>

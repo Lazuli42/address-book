@@ -9,16 +9,19 @@
         <form action="/new_contact" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
 
                 <label for="phone">Phone Number</label>
-                <input type="text" class="form-control" id="phone" placeholder="(555) 555-555" required>
+                <input type="text" name="phone" class="form-control" id="phone" placeholder="(555) 555-555" required>
 
                 <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="Address" required>
+                <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <form action="/clear_list" method="post">
+            <button type="submit" class="btn btn-warning">Clear List</button>
         </form>
 
         {% if contacts is not empty %}
